@@ -23,6 +23,6 @@ if __name__ == "__main__":
 
     with open('%s.csv' % "_".join(keywords), 'w') as csvfile:
         writer = csv.writer(csvfile, delimiter=',')
-        writer.writerow(["ID", "Published", "Title", "Abstract"])
+        writer.writerow(["ID", "Published", "Title", "Abstract", "Link"])
         for p in papers:
             writer.writerow(p)

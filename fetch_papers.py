@@ -113,8 +113,8 @@ if __name__ == "__main__":
     print('Sleeping for %i seconds' % (args.wait_time , ))
     time.sleep(args.wait_time + random.uniform(0, 3))
 
-  # save the database before we quit, if we found anything new
-  if num_added_total > 0:
-    print('Saving database with %d papers to %s' % (len(db), Config.db_path))
-    safe_pickle_dump(db, Config.db_path)
+    # save the database before we quit, if we found anything new
+    if num_added_total > 0:
+      print('Saving database with %d papers to %s' % (len(db), Config.db_path))
+      safe_pickle_dump(db, Config.db_path)
 
